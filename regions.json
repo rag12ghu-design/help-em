@@ -1,0 +1,91 @@
+{
+  "regions": [
+    {
+      "id": "nav-pill",
+      "kind": "chrome",
+      "grid": "D0:G1",
+      "container": true,
+      "note": "floating dynamic island frosted glass navigation capsule"
+    },
+    {
+      "id": "nav-logo",
+      "kind": "text",
+      "grid": "D0:E1",
+      "note": "Beacon brand logo and bell icon"
+    },
+    {
+      "id": "nav-status",
+      "kind": "control",
+      "grid": "E0:F1",
+      "note": "live network status indicator with green dot"
+    },
+    {
+      "id": "nav-cta",
+      "kind": "control",
+      "grid": "F0:G1",
+      "note": "Open App pill button"
+    },
+    {
+      "id": "hero-headline",
+      "kind": "text",
+      "grid": "C2:H3",
+      "note": "When the grid drops, neighbors take flight headline"
+    },
+    {
+      "id": "console-chassis",
+      "kind": "chrome",
+      "grid": "C5:H7",
+      "container": true,
+      "note": "frosted glass console card chassis with rounded squircle corners"
+    },
+    {
+      "id": "compass-radar",
+      "kind": "plate",
+      "grid": "D5:E7",
+      "note": "circular compass radar instrument with glowing green aid nodes and cardinal markings"
+    },
+    {
+      "id": "sos-card",
+      "kind": "chrome",
+      "grid": "E5:G6",
+      "container": true,
+      "note": "translucent emergency sos card background"
+    },
+    {
+      "id": "sos-badge",
+      "kind": "text",
+      "grid": "E5:F5",
+      "note": "red Emergency SOS badge"
+    },
+    {
+      "id": "sos-title",
+      "kind": "text",
+      "grid": "E5:G6",
+      "note": "Live AI situation updates heading"
+    },
+    {
+      "id": "sos-summary",
+      "kind": "text",
+      "grid": "E6:G6",
+      "note": "District 7 Grid Restoring mutual aid summary"
+    },
+    {
+      "id": "checkin-label",
+      "kind": "text",
+      "grid": "E7:G7",
+      "note": "Household Safety Check-in label"
+    },
+    {
+      "id": "checkin-toggle",
+      "kind": "control",
+      "grid": "G7:H7",
+      "note": "iOS style illuminated green toggle switch"
+    },
+    {
+      "id": "primary-cta",
+      "kind": "control",
+      "grid": "E8:F9",
+      "note": "Connect Your Neighborhood glowing pill button"
+    }
+  ]
+}

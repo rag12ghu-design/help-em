@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #06391c;
+}
+
+@layer base {
+  * {
+    border-color: rgba(6, 57, 28, 0.12);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: "Helvetica Neue", Helvetica, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  }
+
+  ::selection {
+    background-color: #06391c;
+    color: #ffffff;
+  }
+}
+
+/* Sleek Apple-style Translucent Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 57, 28, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 57, 28, 0.45);
+}
+
+/* Translucent Glass Classes */
+.apple-glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(6, 57, 28, 0.12);
+}
+
+.apple-glass-dark {
+  background: rgba(6, 57, 28, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.apple-glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 57, 28, 0.1);
+}
+
+/* 3D Mascot Floating Presentation Animations */
+@keyframes float-mascot {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(0.4deg);
+  }
+}
+
+@keyframes float-shadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(0.82);
+    opacity: 0.22;
+  }
+}
+
+.animate-float-mascot {
+  animation: float-mascot 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-float-shadow {
+  animation: float-shadow 4.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
