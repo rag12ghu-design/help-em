@@ -102,3 +102,19 @@
   will-change: transform, opacity;
 }
 
+/* Authentic Apple Voice Memos / FaceTime Audio Equalizer Bar Animation */
+@keyframes equalizer-bar {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-equalizer-bar {
+  animation: equalizer-bar 0.75s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  transform-origin: bottom;
+  will-change: transform;
+}
+

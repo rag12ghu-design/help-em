@@ -406,7 +406,7 @@ export function ResilienceProvider({ children }: { children: ReactNode }) {
       targetDepartment?: DepartmentType;
     }
   ): EmergencyTicket => {
-    const id = "tkt-" + Date.now().toString(36);
+    const id = `tkt-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     const ticketNumber = `TKT-${randomNum}`;
     const now = new Date();
@@ -470,7 +470,7 @@ export function ResilienceProvider({ children }: { children: ReactNode }) {
   };
 
   const addDebunker = (item: Omit<DebunkerItem, "id">) => {
-    const id = "debunk-" + Date.now().toString(36);
+    const id = `debunk-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
     const newItem: DebunkerItem = { ...item, id };
     setDebunkers((prev) => [newItem, ...prev]);
   };
@@ -478,7 +478,7 @@ export function ResilienceProvider({ children }: { children: ReactNode }) {
   const addAnnouncement = (
     item: Omit<CommunityAnnouncement, "id" | "timestamp" | "isActive">
   ) => {
-    const id = "ann-" + Date.now().toString(36);
+    const id = `ann-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, "0");
     const mins = now.getMinutes().toString().padStart(2, "0");

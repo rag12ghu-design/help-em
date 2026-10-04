@@ -369,7 +369,7 @@ export default function ResponderOperationsDesk({
             className={`min-h-[44px] px-4 py-2 text-xs sm:text-sm font-extrabold flex items-center gap-2 border-b-2 transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "triage"
                 ? "border-[#06391C] text-[#06391C]"
-                : "border-transparent text-[#06391C]/60 hover:text-[#06391C]"
+                : "border-transparent text-[#06391C]/80 hover:text-[#06391C]"
             }`}
           >
             <ShieldAlert className="w-4 h-4" />
@@ -385,7 +385,7 @@ export default function ResponderOperationsDesk({
             className={`min-h-[44px] px-4 py-2 text-xs sm:text-sm font-extrabold flex items-center gap-2 border-b-2 transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "roster"
                 ? "border-[#06391C] text-[#06391C]"
-                : "border-transparent text-[#06391C]/60 hover:text-[#06391C]"
+                : "border-transparent text-[#06391C]/80 hover:text-[#06391C]"
             }`}
           >
             <Users className="w-4 h-4" />
@@ -401,7 +401,7 @@ export default function ResponderOperationsDesk({
             className={`min-h-[44px] px-4 py-2 text-xs sm:text-sm font-extrabold flex items-center gap-2 border-b-2 transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "teams"
                 ? "border-[#06391C] text-[#06391C]"
-                : "border-transparent text-[#06391C]/60 hover:text-[#06391C]"
+                : "border-transparent text-[#06391C]/80 hover:text-[#06391C]"
             }`}
           >
             <Building2 className="w-4 h-4" />
@@ -417,7 +417,7 @@ export default function ResponderOperationsDesk({
             className={`min-h-[44px] px-4 py-2 text-xs sm:text-sm font-extrabold flex items-center gap-2 border-b-2 transition-all cursor-pointer whitespace-nowrap ${
               activeTab === "cms"
                 ? "border-[#06391C] text-[#06391C]"
-                : "border-transparent text-[#06391C]/60 hover:text-[#06391C]"
+                : "border-transparent text-[#06391C]/80 hover:text-[#06391C]"
             }`}
           >
             <FileText className="w-4 h-4" />
@@ -537,7 +537,7 @@ export default function ResponderOperationsDesk({
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {/* Reporter & Location */}
                         <div className="space-y-1 text-xs">
-                          <span className="text-[#06391C]/60 font-bold uppercase tracking-wider text-[10px] block">
+                          <span className="text-[#06391C]/80 font-bold uppercase tracking-wider text-[10px] block">
                             Reporter & Contact
                           </span>
                           <p className="font-extrabold text-[#06391C] text-sm">{ticket.contactName}</p>
@@ -550,7 +550,7 @@ export default function ResponderOperationsDesk({
 
                         {/* Emergency Category & Situation Description */}
                         <div className="space-y-1.5 text-xs md:col-span-2">
-                          <span className="text-[#06391C]/60 font-bold uppercase tracking-wider text-[10px] block">
+                          <span className="text-[#06391C]/80 font-bold uppercase tracking-wider text-[10px] block">
                             Situation & Urgent Needs
                           </span>
                           <p className="font-black text-[#06391C] text-sm">
@@ -597,7 +597,7 @@ export default function ResponderOperationsDesk({
                               <span>Assigned: {ticket.assignedTeamName}</span>
                             </span>
                           ) : (
-                            <span className="text-xs text-[#06391C]/60 font-semibold italic">
+                            <span className="text-xs text-[#06391C]/80 font-semibold italic">
                               Awaiting unit dispatch
                             </span>
                           )}
@@ -671,7 +671,7 @@ export default function ResponderOperationsDesk({
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#06391C]/15 shadow-apple-sm">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-[#06391C]/10">
                 <div>
-                  <span className="text-[11px] font-black uppercase tracking-wider text-[#30D158] bg-[#30D158]/15 px-3 py-1 rounded-full border border-[#30D158]/30">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-[#06391C] bg-[#30D158]/15 px-3 py-1 rounded-full border border-[#30D158]/30">
                     Community Accounting Matrix
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-black text-[#06391C] mt-2">
@@ -863,11 +863,11 @@ export default function ResponderOperationsDesk({
                         </p>
                         <div className="grid grid-cols-2 gap-2 pt-1 font-semibold">
                           <div>
-                            <span className="text-[10px] text-[#06391C]/60 block font-bold">Team Leader</span>
+                            <span className="text-[10px] text-[#06391C]/80 block font-bold">Team Leader</span>
                             <span>{team.leader}</span>
                           </div>
                           <div>
-                            <span className="text-[10px] text-[#06391C]/60 block font-bold">Hotline</span>
+                            <span className="text-[10px] text-[#06391C]/80 block font-bold">Hotline</span>
                             <span className="font-mono">{team.contactNumber}</span>
                           </div>
                         </div>

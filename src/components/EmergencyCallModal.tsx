@@ -104,7 +104,7 @@ export default function EmergencyCallModal({
 
     setMessages([
       {
-        id: `sys-${Date.now()}`,
+        id: `sys-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
         sender: "system",
         text: `Initiating peer-to-peer radio link to ${target.name} (${target.frequency})...`,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
@@ -123,7 +123,7 @@ export default function EmergencyCallModal({
       setMessages((prev) => [
         ...prev,
         {
-          id: `disp-${Date.now()}`,
+          id: `disp-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
           sender: "dispatcher",
           text: target.greeting,
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
@@ -145,7 +145,7 @@ export default function EmergencyCallModal({
     setMessages((prev) => [
       ...prev,
       {
-        id: `sys-end-${Date.now()}`,
+        id: `sys-end-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
         sender: "system",
         text: `Call terminated (${formatTime(callDuration)}). Incident Log #HQ-${Math.floor(
           1000 + Math.random() * 9000
@@ -205,7 +205,7 @@ export default function EmergencyCallModal({
     setMessages((prev) => [
       ...prev,
       {
-        id: `user-${Date.now()}`,
+        id: `user-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
         sender: "user",
         text: tagText,
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
@@ -218,7 +218,7 @@ export default function EmergencyCallModal({
       setMessages((prev) => [
         ...prev,
         {
-          id: `disp-ack-${Date.now()}`,
+          id: `disp-ack-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
           sender: "dispatcher",
           text: `Acknowledged: "${tagText}". Barangay emergency responders logged this alert for priority dispatch.`,
           timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
@@ -268,9 +268,9 @@ export default function EmergencyCallModal({
 
           {/* Mini Sound Waveform Indicator */}
           {callStatus === "connected" && (
-            <div className="flex items-center gap-0.5 h-3 px-1">
+            <div className="flex items-end gap-0.5 h-3 px-1">
               <span className="w-0.5 h-2 bg-[#30D158] animate-pulse" />
-              <span className="w-0.5 h-3 bg-[#30D158] animate-bounce" />
+              <span className="w-0.5 h-3 bg-[#30D158] animate-equalizer-bar" />
               <span className="w-0.5 h-1.5 bg-[#30D158] animate-pulse" />
             </div>
           )}

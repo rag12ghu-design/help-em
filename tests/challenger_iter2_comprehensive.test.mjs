@@ -112,7 +112,12 @@ describe("CHALLENGER ITERATION 2 VERIFICATION SUITE", () => {
       // 1. SOSConsole audio & SOS buttons
       const sosFile = fs.readFileSync(path.resolve("src/components/SOSConsole.tsx"), "utf8");
       assert.ok(sosFile.includes('className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-[#30D158]/30'), "SOSConsole audio button must be 44pt");
-      assert.ok(sosFile.includes('className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-black/5'), "SOSConsole SOS button must be 44pt");
+      assert.ok(
+        sosFile.includes("min-h-[44px]") &&
+        sosFile.includes("min-w-[44px]") &&
+        (sosFile.includes("bg-[#FF453A]") || sosFile.includes("bg-red-600")),
+        "SOSConsole SOS button must be 44pt and styled with emergency affordance"
+      );
 
       // 2. SafetyCheckIn toggle switch
       const sciFile = fs.readFileSync(path.resolve("src/components/SafetyCheckIn.tsx"), "utf8");

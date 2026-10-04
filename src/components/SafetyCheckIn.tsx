@@ -62,7 +62,7 @@ export default function SafetyCheckIn({
               aria-checked={isSafe}
               aria-label="Toggle household community safety status"
               onClick={onToggle}
-              className={`relative inline-flex items-center h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#30D158] focus:ring-offset-2 ${
+              className={`relative inline-flex items-center h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#30D158] focus:ring-offset-2 before:absolute before:-inset-2.5 before:content-[''] before:min-h-[44px] before:min-w-[44px] ${
                 isSafe ? "bg-[#30D158]" : "bg-[#D1D1D6] hover:bg-[#C7C7CC]"
               }`}
             >
@@ -95,7 +95,7 @@ export default function SafetyCheckIn({
         <div className="flex items-center gap-2">
           <CheckCircle2
             className={`w-4 h-4 transition-colors ${
-              isSafe ? "text-[#30D158]" : "text-[#06391C]/60"
+              isSafe ? "text-[#30D158]" : "text-[#06391C]/80"
             }`}
           />
           <span className="font-black tracking-tight text-[#06391C]">

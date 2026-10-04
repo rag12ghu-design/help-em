@@ -33,7 +33,7 @@ export default function Navigation({ onOpenApp, onOpenCall }: NavigationProps) {
           <span className="text-2xl sm:text-3xl font-black tracking-tight text-[#06391C] leading-none">
             Help&apos;Em
           </span>
-          <span className="text-[10px] font-black text-[#06391C]/60 tracking-wider uppercase mt-0.5">
+          <span className="text-[10px] font-black text-[#06391C]/80 tracking-wider uppercase mt-0.5">
             Barangay Quiling Network
           </span>
         </div>

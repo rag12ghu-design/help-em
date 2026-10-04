@@ -39,7 +39,16 @@ export default function Footer({ onOpenCall }: FooterProps = {}) {
             <li className="flex items-center justify-between gap-1.5">
               <span className="flex items-center gap-2 font-medium">
                 <Phone className="w-4 h-4 text-[#1B7340] shrink-0" />
-                <span className="font-black text-[#06391C]">Barangay Desk: 0917-889-MMSU</span>
+                <span className="font-black text-[#06391C]">
+                  Barangay Desk:{" "}
+                  <a
+                    href="tel:0917-889-6678"
+                    className="underline hover:text-[#1B7340] transition-colors py-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#1B7340] rounded relative before:absolute before:-inset-2 before:content-['']"
+                    aria-label="Call Barangay Desk at 0917-889-MMSU"
+                  >
+                    0917-889-MMSU
+                  </a>
+                </span>
               </span>
               {onOpenCall && (
                 <button
@@ -54,7 +63,16 @@ export default function Footer({ onOpenCall }: FooterProps = {}) {
             <li className="flex items-center justify-between gap-1.5">
               <span className="flex items-center gap-2 font-medium">
                 <Phone className="w-4 h-4 text-[#0066CC] shrink-0" />
-                <span className="font-black text-[#06391C]">MMSU Health Clinic: (077) 600-0459</span>
+                <span className="font-black text-[#06391C]">
+                  MMSU Health Clinic:{" "}
+                  <a
+                    href="tel:0776000459"
+                    className="underline hover:text-[#0066CC] transition-colors py-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#0066CC] rounded relative before:absolute before:-inset-2 before:content-['']"
+                    aria-label="Call MMSU Health Clinic at (077) 600-0459"
+                  >
+                    (077) 600-0459
+                  </a>
+                </span>
               </span>
               {onOpenCall && (
                 <button
@@ -68,7 +86,24 @@ export default function Footer({ onOpenCall }: FooterProps = {}) {
             </li>
             <li className="flex items-center gap-2 font-medium">
               <Phone className="w-4 h-4 text-[#D70015] shrink-0" />
-              <span className="font-black text-[#06391C]">Batac CDRRMO: 911 / 161</span>
+              <span className="font-black text-[#06391C]">
+                Batac CDRRMO:{" "}
+                <a
+                  href="tel:911"
+                  className="underline hover:text-[#D70015] transition-colors py-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#D70015] rounded relative before:absolute before:-inset-2 before:content-['']"
+                  aria-label="Call Batac CDRRMO at 911"
+                >
+                  911
+                </a>
+                {" / "}
+                <a
+                  href="tel:161"
+                  className="underline hover:text-[#D70015] transition-colors py-1 inline-block focus:outline-none focus:ring-2 focus:ring-[#D70015] rounded relative before:absolute before:-inset-2 before:content-['']"
+                  aria-label="Call Batac CDRRMO at 161"
+                >
+                  161
+                </a>
+              </span>
             </li>
           </ul>
         </div>

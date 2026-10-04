@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { X, Layers, AlertTriangle, PhoneCall } from "lucide-react";
+import { Layers, AlertTriangle, PhoneCall } from "lucide-react";
 import { PurokNode } from "@/types/purok";
 import PurokMap from "./PurokMap";
 import RadarLayer from "./RadarLayer";
@@ -55,7 +55,7 @@ export default function SOSConsole({
             </span>
           </div>
 
-          <div className="flex items-center justify-between sm:justify-end gap-2 w-full sm:w-auto">
+          <div className="flex flex-wrap items-center justify-between sm:justify-end gap-2 w-full sm:w-auto">
             {/* Layer Switcher (Purok Map vs Typhoon Radar) */}
             <div
               data-testid="map-layer-switcher"
@@ -102,15 +102,16 @@ export default function SOSConsole({
               </button>
             )}
 
-            {/* Quick Emergency Dispatch Trigger (Matching basis-hero.jpg close circle) */}
+            {/* Quick Emergency Dispatch Trigger */}
             <button
               type="button"
               onClick={() => onOpenModal("sos")}
-              className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#06391C]/70 hover:text-[#06391C] border border-[#06391C]/15 transition-colors focus:outline-none focus:ring-2 focus:ring-[#06391C] cursor-pointer shadow-xs"
+              className="h-11 min-h-[44px] min-w-[44px] px-3.5 rounded-full bg-[#FF453A] hover:bg-red-600 flex items-center justify-center gap-1.5 text-white font-black transition-colors focus:outline-none focus:ring-2 focus:ring-[#FF453A] cursor-pointer shadow-xs"
               title="Quick SOS emergency trigger"
               aria-label="Emergency SOS trigger"
             >
-              <X className="w-5 h-5" />
+              <AlertTriangle className="w-4 h-4 text-white" />
+              <span className="text-xs font-black tracking-wider uppercase">SOS</span>
             </button>
           </div>
         </div>
